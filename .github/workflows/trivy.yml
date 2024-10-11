@@ -10,6 +10,8 @@ jobs:
   trivy:
     name: Run Trivy sarif report
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
     steps:
       - name: Clone repo
         uses: actions/checkout@v4
